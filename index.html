@@ -15,7 +15,7 @@
          window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || 
          window.msIDBKeyRange; 
          alert('2'); 
-         /* if (!window.indexedDB) {
+         if (!window.indexedDB) {
             window.alert("Your browser doesn't support a stable version of IndexedDB."); 
          } else {alert('Ok');}
          alert('3'); 
@@ -44,7 +44,7 @@
             }
          }
          alert('6'); 
-         function read() {
+         /* function read() {
             var transaction = db.transaction(["employee"]);
             var objectStore = transaction.objectStore("employee");
             var request = objectStore.get("00-03");
