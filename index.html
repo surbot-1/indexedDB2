@@ -77,8 +77,8 @@
                   var id = cursor.key; 
                   var name = cursor.value.name; 
                   var age = cursor.value.age; 
-                  var gender = request.result.gender; 
-                  var email = request.result.email; 
+                  var gender = cursor.value.gender; 
+                  var email = cursor.value.email; 
                   alert("Name for id " + id + " is " + name + ", Age: " + age + ", Gender: " + gender + ", Email: " + email);
                   cursor.continue();
                } else {
