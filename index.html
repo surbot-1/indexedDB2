@@ -17,9 +17,9 @@
          
          if (!window.indexedDB) {
             window.alert("Your browser doesn't support a stable version of IndexedDB."); 
-         }
+         } else {alert('Ok');}
          
-         const employeeData = [
+         var employeeData = [
             { id: "00-01", name: "gopal", age: 35, email: "gopal@tutorialspoint.com" },
             { id: "00-02", name: "prasad", age: 32, email: "prasad@tutorialspoint.com" }
          ];
@@ -27,12 +27,12 @@
          var request = window.indexedDB.open("newDatabase", 1);
          
          request.onerror = function(event) {
-            console.log("error: ");
+            alert("error: ");
          };
          
          request.onsuccess = function(event) {
             db = request.result;
-            console.log("success: "+ db);
+            alert("success: "+ db);
          };
          
          request.onupgradeneeded = function(event) {
