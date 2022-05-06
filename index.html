@@ -55,8 +55,12 @@
             
             request.onsuccess = function(event) {
                // Do something with the request.result!
-               if(request.result) {
-                  alert("Name: " + request.result.name + ", Age: " + request.result.age + ", Email: " + request.result.email);
+               if(request.result) { 
+                  var name = request.result.name; 
+                  var age = request.result.age; 
+                  var gender = request.result.gender; 
+                  var email = request.result.email; 
+                  alert("Name: " + name + ", Age: " + age + ", Gender: " + gender + ", Email: " + email);
                } else {
                   alert("Kenny couldn't be found in your database!");
                }
@@ -69,8 +73,13 @@
             objectStore.openCursor().onsuccess = function(event) {
                var cursor = event.target.result;
                
-               if (cursor) {
-                  alert("Name for id " + cursor.key + " is " + cursor.value.name + ", Age: " + cursor.value.age + ", Email: " + cursor.value.email);
+               if (cursor) { 
+                  var id = cursor.key; 
+                  var name = cursor.value.name; 
+                  var age = cursor.value.age; 
+                  var gender = request.result.gender; 
+                  var email = request.result.email; 
+                  alert("Name for id " + id + " is " + name + ", Age: " + age + ", Gender: " + gender + ", Email: " + email);
                   cursor.continue();
                } else {
                   alert("No more entries!");
