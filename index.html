@@ -44,7 +44,7 @@
             }
          }
          alert('6'); 
-         /* function read() {
+         function read() {
             var transaction = db.transaction(["employee"]);
             var objectStore = transaction.objectStore("employee");
             var request = objectStore.get("00-03");
@@ -64,7 +64,7 @@
             };
          }
          alert('7'); 
-         function readAll() {
+         /* function readAll() {
             var objectStore = db.transaction("employee").objectStore("employee");
             
             objectStore.openCursor().onsuccess = function(event) {
