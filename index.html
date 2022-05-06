@@ -20,8 +20,8 @@
          } else {alert('Ok');}
          alert('3'); 
          var employeeData = [
-            { id: "00-01", name: "gopal", age: 35, email: "gopal@tutorialspoint.com" },
-            { id: "00-02", name: "prasad", age: 32, email: "prasad@tutorialspoint.com" }
+            { id: "00-01", name: "gopal", age: 35, gender: "male", email: "gopal@tutorialspoint.com" },
+            { id: "00-02", name: "prasad", age: 32, gender: "male", email: "prasad@tutorialspoint.com" }
          ];
          var db;
          var request = window.indexedDB.open("newDatabase", 1);
@@ -81,7 +81,7 @@
          function add() {
             var request = db.transaction(["employee"], "readwrite")
             .objectStore("employee")
-            .add({ id: "00-03", name: "Kenny", age: 19, email: "kenny@planet.org" });
+            .add({ id: "00-03", name: "Kenny", age: 19, gender: "female", email: "kenny@planet.org" });
             
             request.onsuccess = function(event) {
                alert("Kenny has been added to your database.");
