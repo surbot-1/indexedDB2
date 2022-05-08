@@ -39,11 +39,11 @@
             var db = event.target.result;
             var objectStore = db.createObjectStore("employee", {keyPath: "id"});
             
-            for (var i in employeeData) { 
+           /* for (var i in employeeData) { 
                objectStore.add(employeeData[i]);
-            } 
+            } */
          } 
-         alert('1'); 
+         alert('10'); 
          function read() {
             var transaction = db.transaction(["employee"]);
             var objectStore = transaction.objectStore("employee");
