@@ -35,14 +35,14 @@
             // alert("success: "+ db);
          };
          
-         request.onupgradeneeded = function(event) {
+        /* request.onupgradeneeded = function(event) {
             var db = event.target.result;
             var objectStore = db.createObjectStore("employee", {keyPath: "id"});
             
             for (var i in employeeData) {
                objectStore.add(employeeData[i]);
             }
-         }
+         } */
          
          function read() {
             var transaction = db.transaction(["employee"]);
