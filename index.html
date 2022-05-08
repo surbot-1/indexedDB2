@@ -66,7 +66,7 @@
                }
             };
          }
-         
+         alert('2'); 
          function readAll() {
             var objectStore = db.transaction("employee").objectStore("employee");
             
@@ -86,7 +86,7 @@
                }
             };
          }
-         
+         alert('3'); 
          function add() {
             var request = db.transaction(["employee"], "readwrite")
             .objectStore("employee")
@@ -100,7 +100,7 @@
                alert("Unable to add data\r\nKenny is aready exist in your database! ");
             }
          }
-         
+         alert('4'); 
          function remove() {
             var request = db.transaction(["employee"], "readwrite")
             .objectStore("employee")
@@ -110,7 +110,7 @@
                alert("Kenny's entry has been removed from your database.");
             };
          } 
-         
+         alert('5'); 
       </script>
       
    </head>
