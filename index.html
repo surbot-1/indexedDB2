@@ -32,7 +32,7 @@
          
          request.onsuccess = function(event) {
             db = request.result;
-            // alert("success: "+ db);
+            alert("success: "+ db);
          };
          
          request.onupgradeneeded = function(event) {
@@ -43,7 +43,7 @@
                objectStore.add(employeeData[i]);
             } 
          } 
-         
+         alert('1'); 
          function read() {
             var transaction = db.transaction(["employee"]);
             var objectStore = transaction.objectStore("employee");
@@ -110,6 +110,7 @@
                alert("Kenny's entry has been removed from your database.");
             };
          } 
+         
       </script>
       
    </head>
